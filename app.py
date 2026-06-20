@@ -1,11 +1,11 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import pickle
+import joblib
+model = joblib.load('model.pkl')
+st.set_page_config(page_title="Loan Approval predictor"
+st.title("Loan Approval perdiction App")                   
 
-# Model load பண்றோம் (உங்க trained RandomForest model file)
-with open('model.pkl', 'rb') as f:
-    model = pickle.load(f)
 
 st.set_page_config(page_title="Loan Approval Predictor", page_icon="🏦", layout="centered")
 
